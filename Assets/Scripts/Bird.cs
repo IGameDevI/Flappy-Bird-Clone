@@ -7,6 +7,8 @@ public class Bird : MonoBehaviour
     private GameObject bird;
 
     private Rigidbody2D rb;
+
+    public bool isLive = true;
     // Start is called before the first frame update
     void Start()
     {
