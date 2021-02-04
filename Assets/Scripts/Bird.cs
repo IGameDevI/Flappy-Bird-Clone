@@ -14,6 +14,7 @@ public class Bird : MonoBehaviour
     {
         bird = GameObject.Find("Bird");
         rb = bird.GetComponent<Rigidbody2D>();
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
@@ -24,5 +25,12 @@ public class Bird : MonoBehaviour
             rb.velocity = Vector2.up * 1.75f;
             
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D obj)
+    {
+        Destroy(gameObject);
+        isLive = false;
+        Time.timeScale = 0;
     }
 }

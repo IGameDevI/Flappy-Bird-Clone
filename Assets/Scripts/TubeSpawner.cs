@@ -7,8 +7,6 @@ public class TubeSpawner : MonoBehaviour
     public Bird bird;
     public GameObject tube;
     
-    private float time = 2.0f;
-
      void Start()
      {
          StartCoroutine(SpawnObject());
